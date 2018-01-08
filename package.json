@@ -22,7 +22,8 @@
 		"heroku-postbuild": "npm run images & npm run favicons & npm run js-copy & npm run css-copy & npm run webpack-prod",
 		"sample": "node ./data/load-sample-data.js",
 		"blowitallaway": "node ./data/load-sample-data.js --delete",
-		"webpack-prod": "webpack -p"
+    "webpack-prod": "webpack -p",
+    "prepcerts": "node ./server/gen-certs.js && rm -rf dist/*.pem && mkdir -p dist && cp private/*.pem dist/"
 	},
 	"repository": {
 		"type": "git",
@@ -37,6 +38,8 @@
 	"homepage": "https://github.com/mattgartner/starter-template#readme",
 	"devDependencies": {
 		"browser-sync": "^2.23.2",
+		"chalk": "^2.3.0",
+		"devcert-with-localhost": "^0.3.3",
 		"nodemon": "^1.14.7",
 		"prettier": "^1.9.2",
 		"rimraf": "^2.6.2"
