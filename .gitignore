@@ -41,3 +41,8 @@ jspm_packages/
 npm-debug.log
 package-lock.json
 
+key.pem
+cert.pem
+tmp
+db/development.sqlite
+private/*
